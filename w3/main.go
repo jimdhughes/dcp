@@ -29,7 +29,7 @@ func SerializeRecursive(n *Node, paths *[]string) {
 
 func (n *Node) deserialize(serial string) {
 	arr := strings.Split(serial, ",")
-	node := &Node{value: arr[0]}
+	node := &Node{}
 	DeserializeRecursive(node, arr)
 }
 
@@ -66,6 +66,7 @@ func main() {
 	node.deserialize(serial)
 	if node.left.left.value == "left.left" {
 		log.Println("Successful")
+		log.Println(node.serialize())
 		return
 	}
 	log.Println("Fail")
