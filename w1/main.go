@@ -20,7 +20,7 @@ func FindAnyTwoNumbersToEqualResult(result int, list []int) bool {
 		if _, ok := seen[element]; ok {
 			return true
 		}
-		seen[result-element] = false
+		seen[result-element] = true
 	}
 	return false
 }
