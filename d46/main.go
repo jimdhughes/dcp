@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 )
 
 func main() {
@@ -16,7 +15,6 @@ func FindPalindrome(s string) string {
 func IsPalindrome(s string) bool {
 	var i, j int
 	j = len(s) - 1
-	log.Printf("Checking: %s\n", s)
 	for i = 0; i < j; i++ {
 		if s[i] != s[j] {
 			return false
