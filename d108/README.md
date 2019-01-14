@@ -1,0 +1,1 @@
+Given two strings A and B, return whether or not A can be shifted some number of times to get B.
