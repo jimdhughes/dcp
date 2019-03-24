@@ -26,6 +26,6 @@ I originally thought it was permutations vs combinations which isn't really true
 
 In game 1 and 2, there's an equal chance that any given roll will be a 5. Once this happens, the failure modes of the next game kick in.
 
-For game 1 - Once you hit a 5, you have a 1/6 chance of winning on the next roll and a 1/5 chance of staying in the exact same place for oyur next roll.
+For game 1 - Once you hit a 5, you have a 1/6 chance of winning on the next roll and a 1/6 chance of staying in the exact same place for oyur next roll and 4/6 chance of starting from 0
 
-For game 2- Once you hit a 5, you have a 1/6 chance of either winning or going back to 0 and having to start all over again.
+For game 2- Once you hit a 5, you have a 1/6 chance either winning and a 5/6 chance of going back to 0 and having to start all over again.
