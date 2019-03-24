@@ -9,17 +9,28 @@ import (
 func main() {
 	rand.Seed(time.Now().Unix())
 	iterations := 1000000
+	runScenario(5, 6, iterations)
+	runScenario(5, 5, iterations)
+}
+
+func runScenario(value1, value2, iterations int) {
 	log.Printf("Running %d iterations\n", iterations)
-	costGame1 := 0
+	cost := 0
+	min := 0
+	max := 0
 	for i := 0; i < iterations; i++ {
-		costGame1 = costGame1 + playGame(5, 6)
+		iterCost := playGame(value1, value2)
+		if iterCost < min || min == 0 {
+			min = iterCost
+		}
+		if iterCost > max || max == 0 {
+			max = iterCost
+		}
+		cost += iterCost
 	}
-	costGame2 := 0
-	for i := 0; i < iterations; i++ {
-		costGame2 = costGame2 + playGame(5, 5)
-	}
-	log.Printf("Avg Game 1 cost: %0.2f\n", float64(costGame1)/float64(iterations))
-	log.Printf("Avg Game 2 cost: %0.2f\n", float64(costGame2)/float64(iterations))
+
+	log.Printf("Scenairo: %d, %d\n", value1, value2)
+	log.Printf("Results:\nMin: %d\nMax: %d\nAvg: %0.2f\n", min, max, float64(cost)/float64(iterations))
 }
 
 func playGame(value1, value2 int) int {
