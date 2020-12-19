@@ -75,6 +75,27 @@ func TestLongestPalindromeNoPalindromeValid(t *testing.T) {
 	
 	res := LongestPalindrome(input) 
 	if len(res) > 1 {
+		t.Error("Expected a 1 character result")
 		t.Fail()
+	}
+}
+
+func TestLongestPalindromeQuestionInputValid(t *testing.T) {
+	input := "aabcdcb"
+	expected := "bcdcb"
+	res := LongestPalindrome(input)
+	if res != expected {
+	
+		t.Fail()
+	}
+}
+
+func TestLongestPalindromeQuestionInputTwoValid(t *testing.T) {
+	input := "bananas"
+	expected := "anana"
+	res := LongestPalindrome(input)
+	if res != expected {
+			t.Errorf("Expected %s, Got %s\n", expected, res)
+			t.Fail()
 	}
 }
