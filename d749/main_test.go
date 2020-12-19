@@ -70,7 +70,7 @@ func TestLongestPalindromeInMiddleValid(t *testing.T) {
 	}
 }
 
-func TestLongestPalindromeInvalid(t *testing.T) {
+func TestLongestPalindromeNoPalindromeValid(t *testing.T) {
 	input := "abcdefghijklmnop"
 	
 	res := LongestPalindrome(input) 
