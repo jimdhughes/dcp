@@ -1,13 +1,5 @@
 package main
 
-import (
-	"log"
-)
-
-func main() {
-	log.Println("hello, world")
-}
-
 // LongestPalindrome checks a string to find it's longest palindrome
 func LongestPalindrome(input string) string {
 	if len(input) == 1 {
