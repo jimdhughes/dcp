@@ -6,6 +6,8 @@ Given a string, find the longest palindromic contiguous substring. If there are 
 
 For example, the longest palindromic substring of "aabcdcb" is "bcdcb". The longest palindromic substring of "bananas" is "anana".
 
+## Duplicate of d046
+
 # Solving
 
 I broke this out into two problems as this is a mixture of a longest common substring and a palindrome question.
