@@ -4,9 +4,9 @@ import "testing"
 
 func TestRunAllTests(t *testing.T) {
 	tables := []struct {
-		x int
-		y int
-		n int
+		matrixSize     int
+		expectedValue  int
+		expectedResult int
 	}{
 		{6, 12, 4},
 		{6, 6, 4},
@@ -17,9 +17,9 @@ func TestRunAllTests(t *testing.T) {
 		{10, 16, 3},
 	}
 	for _, table := range tables {
-		res := CountOccurancesInMatrix(table.x, table.y)
-		if res != table.n {
-			t.Errorf("Wrong result for Matrix. Size: %d, value: %d. Expected: %d, got: %d\n", table.x, table.y, table.n, res)
+		res := CountOccurancesInMatrix(table.matrixSize, table.expectedValue)
+		if res != table.expectedResult {
+			t.Errorf("Wrong result for Matrix. Size: %d, value: %d. Expected: %d, got: %d\n", table.matrixSize, table.expectedValue, table.expectedResult, res)
 		}
 	}
 }
