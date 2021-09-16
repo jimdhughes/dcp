@@ -30,10 +30,10 @@ More clever would be to do some multiplication and early exit? I still think it 
 12:
 1 2 3 4 5 6
 |---------| 6 - inc i
---|-------| 12 - inc i
+--|-------| 12 - add 2 - inc i
 ----|-----| 18 - dec j
 ----|---|-- 15 - dec j
-----|-|---- 12 - inc i
+----|-|---- 12 - add 2 - inc i
 ------|---- i == j -> exit
 36:
 1 2 3 4 5 6
@@ -42,8 +42,15 @@ More clever would be to do some multiplication and early exit? I still think it 
 ----|-----| 18 - inc i
 ------|---| 24 - inc i
 --------|-| 30 - inc i
-----------| 36 - exit
+----------| 36 - add 1 - exit
 
 this is a more logrithmic approach. we get 2, x2 for both sides = appears 4 times
 
 6:
+1 2 3 4 5 6
+|---------| 6 - inc i, add 2
+--|-------| 12 - dec j
+--|-----|-- 10 - dec j
+--|---|---- 8 - dec j
+--|-|------ 6 - inc i add 2
+----|------ 9 - exit
