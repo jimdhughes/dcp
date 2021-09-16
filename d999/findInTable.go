@@ -7,7 +7,7 @@ func FindInMatrix(matrixSize, value int) int {
 
 	for i <= j {
 		if i*j == value {
-			if (i == 1 && j == matrixSize) || (i == j && j == matrixSize) || (i == 1 && j == 1) {
+			if (i == matrixSize && j == matrixSize) || (i == 1 && j == 1) {
 				counts += 1
 			} else {
 				counts += 2

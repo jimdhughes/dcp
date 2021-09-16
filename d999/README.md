@@ -27,7 +27,7 @@ And there are 4 12's in the table.
 Super naive way of doing this is to just build the table then iterate through it. I imagine that'd be a 2\*O(n^2) effort though
 
 More clever would be to do some multiplication and early exit? I still think it might be O(n^2)
-
+12:
 1 2 3 4 5 6
 |---------| 6 - inc i
 --|-------| 12 - inc i
@@ -35,4 +35,15 @@ More clever would be to do some multiplication and early exit? I still think it 
 ----|---|-- 15 - dec j
 ----|-|---- 12 - inc i
 ------|---- i == j -> exit
+36:
+1 2 3 4 5 6
+|---------| 6 - inc i
+--|-------| 12 - inc i
+----|-----| 18 - inc i
+------|---| 24 - inc i
+--------|-| 30 - inc i
+----------| 36 - exit
+
 this is a more logrithmic approach. we get 2, x2 for both sides = appears 4 times
+
+6:

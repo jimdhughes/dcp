@@ -11,7 +11,7 @@ func TestFindInMatrixFromQuestion(t *testing.T) {
 
 func TestFindInMatrixInTopRightCorner(t *testing.T) {
 	res := FindInMatrix(6, 6)
-	if res != 3 {
+	if res != 4 {
 		t.Fail()
 	}
 }
