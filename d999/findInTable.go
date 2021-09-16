@@ -1,6 +1,6 @@
 package main
 
-func FindInMatrix(matrixSize, value int) int {
+func CountOccurancesInMatrix(matrixSize, value int) int {
 	i := 1
 	j := matrixSize
 	counts := 0
