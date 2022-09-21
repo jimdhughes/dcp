@@ -16,7 +16,8 @@ func SayHello() {
 }
 
 func Schedule(f fn, n int) {
-	timer := time.NewTimer((time.Millisecond * n))
+	second := 1000
+	timer := time.NewTimer((time.Millisecond * time.Duration(n*second)))
 	<-timer.C
 	f()
 }
